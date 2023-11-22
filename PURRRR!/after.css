@@ -1,0 +1,110 @@
+@import url(https://fonts.google.com/specimen/Roboto+Slab?query=roboto+slab);
+body{
+    background-color: black;
+    color: orange;
+}
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Style for Next and Previous buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.next {
+    right: 0;
+}
+.after{
+    padding-bottom: 10rem;
+    text-align: center;
+    margin-top: 10%;
+    
+}
+
+.after.after-container{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+
+}
+
+.after-container.after-box{
+    position:relative;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1 );
+    overflow: hidden;
+
+}
+.after-box img{
+    width: 30%;
+    transition:.5s ease;
+    border-radius: 15%;
+}
+.after-box img:hover{
+    transform :scale(1.1);
+    
+}
+
+.after-box.after-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .1 ),var(--main-colour));
+    color:var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding:0 4rem;
+    opacity: 0;
+    transition: .5s ease;
+
+}
+.after-box:hover .after-layer{
+opacity: 1;
+}
+
+.after-layer{
+    text-align: center;
+    font-size: 1.5rem;
+    scroll-margin: 3%;
+    background-color: white;
+    box-shadow: 0 0 10px;
+    float: right;
+    padding: 5%;
+    border-radius: 20px;
+
+}
+
+.after-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background:var(--white-color);
+    border-radius: 50%;
+}
+.after-layer a i{
+    font-size: 2rem;
+    color: #333;
+
+}
